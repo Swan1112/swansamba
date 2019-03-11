@@ -79,7 +79,7 @@ theme: cactus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/BlackSwan89/blog2
+  repo: https://github.com/Swan1112/swanprojet2
   branch:
 
 # Hexo-generator-search
