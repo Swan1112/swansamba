@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+  # This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+# media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "source/_posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1", default: "Untitled"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Author", name: "author", widget: "string", default: "Author"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["news"]}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
